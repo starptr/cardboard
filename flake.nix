@@ -9,11 +9,11 @@
       keepFnInput = f: input: let
         nested-input = { inherit input; };
       in
-        union-fn-output-with-input-attrset f nested-input;
+        self.lib.union-fn-output-with-input-attrset f nested-input;
       forceKeepFnInput = f: input: let
         nested-input = { inherit input; };
       in
-        union-fn-output-with-input-attrset-high-precedence f nested-input;
+        self.lib.union-fn-output-with-input-attrset-high-precedence f nested-input;
     };
   };
 }
